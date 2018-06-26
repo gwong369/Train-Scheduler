@@ -31,3 +31,9 @@
 .table {
     padding: 10px;
 }
+
+#submit-btn {
+    background-color: #337ab7;
+    color: #fff;
+    border: 0px;
+}

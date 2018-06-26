@@ -42,25 +42,25 @@ $(document).ready(function () {
 
         // var dConverted = moment(time,'hh:mm').subtract(1, 'years');
         var dConverted = moment(childSnapshot.val().trainTime, 'HH:mm').subtract(1, 'years');
-        console.log("DATE CONVERTED: " + dConverted);
+        // console.log("DATE CONVERTED: " + dConverted);
         var trainTime = moment(dConverted).format('HH:mm');
-        console.log("TRAIN TIME : " + trainTime);
+        // console.log("TRAIN TIME : " + trainTime);
 
         //DIFFERENCE B/T THE TIMES 
         var tConverted = moment(trainTime, 'HH:mm').subtract(1, 'years');
         var tDifference = moment().diff(moment(tConverted), 'minutes');
-        console.log("DIFFERENCE IN TIME: " + tDifference);
+        // console.log("DIFFERENCE IN TIME: " + tDifference);
         //REMAINDER 
         var tRemainder = tDifference % frequency;
-        console.log("TIME REMAINING: " + tRemainder);
+        // console.log("TIME REMAINING: " + tRemainder);
         //MINUTES UNTIL NEXT TRAIN
         var minsAway = frequency - tRemainder;
-        console.log("MINUTES UNTIL NEXT TRAIN: " + minsAway);
+        // console.log("MINUTES UNTIL NEXT TRAIN: " + minsAway);
         //NEXT TRAIN
         var nextTrain = moment().add(minsAway, 'minutes');
-        console.log("ARRIVAL TIME: " + moment(nextTrain).format('HH:mm A'));
+        // console.log("ARRIVAL TIME: " + moment(nextTrain).format('HH:mm A'));
 
-        $('#trainTable').append(
+        $('#trainTable').prepend(
             "<tr><td id='nameDisplay'>" + childSnapshot.val().trainName +
             "</td><td id='destDisplay'>" + childSnapshot.val().destination +
             "</td><td id='freqDisplay'>" + childSnapshot.val().frequency +
