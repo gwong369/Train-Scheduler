@@ -1,0 +1,33 @@
+.jumbotron {
+    text-align: center; 
+    background-color: #7f462c; 
+    color: white;
+}
+
+.trainHeader {
+    background-color: #337ab7; 
+    color: white; 
+    padding: 7px 0px 7px 9px;
+    font-size: 15px;
+}
+
+.tableHeader {
+    border: solid 2px #337ab7; 
+    border-radius: 5px;
+}
+
+.addTrain {
+    border: solid 2px #337ab7; 
+    border-radius: 5px;
+}
+
+.formHeader {
+    background-color: #337ab7; 
+    color: white; 
+    padding: 7px 0px 7px 9px;
+    font-size: 15px;
+}
+
+.table {
+    padding: 10px;
+}
